@@ -27,17 +27,17 @@ public abstract class SensorsManager {
     }
 
 
-    abstract void Accelerometer(ContentValues contentValues);
+    public abstract void Accelerometer(ContentValues contentValues);
 
-    abstract void OnError(ContentValues contentValues);
+    public abstract void OnError(ContentValues contentValues);
 
-    abstract void GyroScopeSensor(ContentValues contentValues);
+    public abstract void GyroScopeSensor(ContentValues contentValues);
 
-    abstract void HeartBeatSensor(ContentValues contentValues);
+    public abstract void HeartBeatSensor(ContentValues contentValues);
 
-    abstract void OriantationSensor(ContentValues contentValues);
+    public abstract void OriantationSensor(ContentValues contentValues);
 
-    abstract void PedometerSensor(ContentValues contentValues);
+    public abstract void PedometerSensor(ContentValues contentValues);
 
 
     // Handling the Listners

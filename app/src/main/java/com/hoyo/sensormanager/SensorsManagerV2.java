@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.util.Log;
 
 /**
  * Created by Abhishek on 01-02-2018.
@@ -195,6 +196,9 @@ public class SensorsManagerV2 {
                     }
                 }
                 break;
+
+            default:
+                Log.e("SensorManagerV2","Error : Unknown Sensor Registration Request -"+sensor);
 
         }
     }
