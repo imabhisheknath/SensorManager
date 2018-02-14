@@ -42,6 +42,7 @@ public abstract class SensorsManager {
 
     // Handling the Listners
 
+
     public void setListner(TYPE... type) {
         for (int i = 0; i < type.length; i++) {
             switch (type[i]) {

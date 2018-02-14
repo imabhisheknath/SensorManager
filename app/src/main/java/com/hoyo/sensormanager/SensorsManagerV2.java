@@ -139,9 +139,12 @@ public class SensorsManagerV2 {
                 Sensor mAccelerometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
                 if (mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null) {
                     mSensorManager.registerListener(accelerometerListener, mAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
+                    Log.e("SensorManagerV2","Registering Accelerometer");
                 } else {
                     if(accelerometerDataListener!=null){
                         accelerometerDataListener.onError("This Device Doesn't Support Accelerometer Sensor");
+                    } else {
+                        Log.e("SensorManagerV2","Error Registering Accelerometer, Unable to Push to the instance listener");
                     }
                 }
                 break;
