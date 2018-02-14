@@ -13,9 +13,9 @@ public class KEY {
 
 
     //Roation
-    public static String AZIMUTH_ORIATION_ANGLE = "azimuth_oriatation_angle";
-    public static String PITCH_ORIATION_ANGLE = "pitch_oriatation_angle";
-    public static String ROLL_ORIATION_ANGLE = "roll_oriatation_angle";
+    public static String AZIMUTH_ORIENTATION_ANGLE = "azimuth";
+    public static String PITCH_ORIENTATION_ANGLE = "pitch";
+    public static String ROLL_ORIENTATION_ANGLE = "roll";
 
 
     //Heart Rate

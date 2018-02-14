@@ -9,7 +9,7 @@ import android.hardware.SensorManager;
 import android.util.Log;
 
 /**
- * Created by Administrator on 01-02-2018.
+ * Created by Abhishek on 01-02-2018.
  */
 
 public abstract class SensorsManager {
@@ -22,11 +22,8 @@ public abstract class SensorsManager {
 
 
     public SensorsManager(Context context) {
-
         this.context = context;
         mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-
-
     }
 
 
@@ -57,7 +54,6 @@ public abstract class SensorsManager {
                         ContentValues contentValues = new ContentValues();
                         contentValues.put(KEY.REGISTER_ERROR, "we dont have an accelerometer!");
                         OnError(contentValues);
-
                     }
 
                     break;
@@ -219,9 +215,9 @@ public abstract class SensorsManager {
             float azimuth = sensorEvent.values[0];
             float pitch = sensorEvent.values[1];
             float roll = sensorEvent.values[2];
-            contentValues.put(KEY.AZIMUTH_ORIATION_ANGLE, azimuth);
-            contentValues.put(KEY.PITCH_ORIATION_ANGLE, pitch);
-            contentValues.put(KEY.ROLL_ORIATION_ANGLE, roll);
+            contentValues.put(KEY.AZIMUTH_ORIENTATION_ANGLE, azimuth);
+            contentValues.put(KEY.PITCH_ORIENTATION_ANGLE, pitch);
+            contentValues.put(KEY.ROLL_ORIENTATION_ANGLE, roll);
             OriantationSensor(contentValues);
         }
 
