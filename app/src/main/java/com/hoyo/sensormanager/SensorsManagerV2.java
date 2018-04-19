@@ -137,7 +137,7 @@ public class SensorsManagerV2 {
         switch (sensor) {
             case ACCELEROMETER:
                 Sensor mAccelerometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-                if (mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) != null) {
+                if (mAccelerometerSensor != null) {
                     mSensorManager.registerListener(accelerometerListener, mAccelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
                     Log.e("SensorManagerV2","Registering Accelerometer");
                 } else {
@@ -151,7 +151,7 @@ public class SensorsManagerV2 {
 
             case GYROSCOPE:
                 Sensor mGyroScopeSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
-                if (mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE) != null) {
+                if (mGyroScopeSensor != null) {
                     mSensorManager.registerListener(gyroscopeSensorListener, mGyroScopeSensor, SensorManager.SENSOR_DELAY_NORMAL);
                 } else {
                    if(gyroscopeDataListener!=null){
@@ -162,8 +162,8 @@ public class SensorsManagerV2 {
                 break;
 
             case HEART_RATE:
-                if (mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE) != null) {
-                    Sensor mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+                Sensor mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+                if (mHeartRateSensor != null) {
                     mSensorManager.registerListener(heartrateSensorListener, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
                 } else {
 
@@ -176,9 +176,8 @@ public class SensorsManagerV2 {
 
 
             case ORIENTATION:
-                if (mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION) != null) {
-
-                    Sensor mOriatationSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+                Sensor mOriatationSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+                if (mOriatationSensor != null) {
                     mSensorManager.registerListener(orientationSensorListener, mOriatationSensor, SensorManager.SENSOR_DELAY_NORMAL);
                 } else {
                     if(orientationDataListener!=null){
@@ -189,9 +188,8 @@ public class SensorsManagerV2 {
 
 
             case PEDOMETER:
-                if (mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER) != null) {
-
-                    Sensor mPedometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+                Sensor mPedometerSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+                if (mPedometerSensor != null) {
                     mSensorManager.registerListener(pedometerListener, mPedometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
                 } else {
                     if(pedometerDataListener!=null){
