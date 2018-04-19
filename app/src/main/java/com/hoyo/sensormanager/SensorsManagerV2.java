@@ -290,7 +290,7 @@ public class SensorsManagerV2 {
     };
 
 
-    //Oriantation Sensor
+    //Orientation Sensor
     private SensorEventListener orientationSensorListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent sensorEvent) {
