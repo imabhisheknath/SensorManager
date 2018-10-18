@@ -273,7 +273,6 @@ public class SensorsManagerV2 {
         }
     };
 
-
     //HeartRateSensor
     private SensorEventListener heartrateSensorListener = new SensorEventListener() {
         @Override
