@@ -3,7 +3,7 @@ package com.hoyo.sensormanager;
 /**
  * Created by Administrator on 01-02-2018.
  */
-
+//19oct2018
 public class KEY {
 
     //Acc
